@@ -30,8 +30,12 @@ TODO :
 1. Install python 2.7.X https://www.python.org/
 2. Install bower https://bower.io/
 3. `bower install` from root dir to load js libs
-2. Run the server `python SLServer.py`
-3. Go to http://localhost:8080
+4. Postgres SQL :
+    * Create an instance of postgres DB https://www.postgresql.org/
+    * Edit `python SLConfig.py` to map your instance
+    * `python SLModels.py` to create schema
+5. Run the server `python SLServer.py`
+6. Enjoy from http://localhost:8080
 
 ### USAGE DOC :
 * bower install

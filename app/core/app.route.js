@@ -8,7 +8,7 @@ angular.module('SLApp')
                 $routeProvider
                         .when('/',
                             {
-                                controller: 'SLController',
+                                // controller: 'SLController',
                                 templateUrl: 'partials/landing.html'
                             })
                         .when('/app',

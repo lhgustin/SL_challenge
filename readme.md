@@ -12,8 +12,19 @@ TODO :
 * Py Bottle
     * Architecture
     * Design Test(s)
+        * https://docs.python.org/3/library/unittest.html
+        * http://docs.python-guide.org/en/latest/writing/tests/
 * Angular JS architecture
     * Architecture
     * Design Test(s)
+        * https://jasmine.github.io/1.3/introduction.html
+        * view-source:file:///Users/ludovicgustin/Downloads/jasmine-standalone-2.8.0/SpecRunner.html
+        * https://docs.angularjs.org/guide/unit-testing
 * Dev phase
 * Documentation to run
+
+
+### INSTALLATION
+1. Install python
+2. Run the server ’’’python SLServer.py’’’
+3. Go to http://localhost:8080

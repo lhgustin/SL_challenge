@@ -24,7 +24,14 @@ TODO :
 * Documentation to run
 
 
+
+
 ### INSTALLATION
-1. Install python
-2. Run the server ’’’python SLServer.py’’’
+1. Install python 2.7.X https://www.python.org/
+2. Install bower https://bower.io/
+3. `bower install` from root dir to load js libs
+2. Run the server `python SLServer.py`
 3. Go to http://localhost:8080
+
+### USAGE DOC :
+* bower install

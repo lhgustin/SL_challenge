@@ -4,7 +4,28 @@
         <meta charset="UTF-8">
         <title>Title</title>
 </head>
-<body>
+<body ng-app="SLApp">
 Hello world !
+
+<div ng-controller="SLController">
+
+</div>
+
+<!--App placeholder-->
+<div ng-view></div>
+
+<!--I. ANGULAR -->
+<script src="./bower_components/angular/angular.min.js"></script>
+
+<!--Angular dependencies-->
+<script src="./bower_components/angular-route/angular-route.min.js"></script>
+
+
+<!-- ANGULAR APP -->
+<!--Note that files defining a module (i.e. .module.js) need to be included before other files that add features (e.g. components, controllers, services, filters) to that module.-->
+<script src="./core/app.module.js"></script>
+<script src="./core/app.route.js"></script>
+<script src="./core/app.ctrller.js"></script>
+<script src="./core/app.service.js"></script>
 </body>
 </html>

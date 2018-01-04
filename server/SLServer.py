@@ -35,19 +35,25 @@ def server_static(path):
         return static_file(path, root='../app/static/images')
 
 
-@route('/app/core/:path#.+#')
+@route('/bower_components/:path#.+#')
+def server_static(path):
+        print 'static!', path
+        return static_file(path, root='../app/bower_components')
+
+
+@route('/core/:path#.+#')
 def server_static(path):
         print 'static!', path
         return static_file(path, root='../app/core')
 
 
-@route('/app/agency-creator/:path#.+#')
+@route('/agency-creator/:path#.+#')
 def server_static(path):
         print 'static!', path
         return static_file(path, root='../app/agency-creator')
 
 
-@route('/app/agency-list/:path#.+#')
+@route('/agency-list/:path#.+#')
 def server_static(path):
         print 'static!', path
         return static_file(path, root='../app/agency-list')

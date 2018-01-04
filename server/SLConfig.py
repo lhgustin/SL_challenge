@@ -4,5 +4,5 @@ db_url = {
           'password': 'polarbears',
           'host': '127.0.0.1',
           'port': 5432,
-          'database': 'yoda'
+          'database': 'yoda_agencies'
   }

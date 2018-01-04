@@ -1,3 +1,7 @@
 <div ng-controller="AgencyListCtrller">
         <h3>Agency-list template</h3>
+        <div ng-repeat="agency in agencies">
+                <strong>{{agency.name}}</strong> <i>{{agency.tags}}</i> <b>{{gradeMapper[agency.grade]}}</b>
+                <p>{{agency.description}}</p>
+        </div>
 </div>

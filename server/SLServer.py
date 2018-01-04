@@ -1,6 +1,7 @@
 from bottle import route, run, post, get, static_file, request
 from SLDao import SLDao
 import SLModels
+import json
 
 VERSION = 0.1
 slDao = SLDao()
@@ -69,14 +70,20 @@ def server_static(path):
 @get('/agencies')
 def get_agencies():
         agencies = slDao.find_all_agencies()
-        return SLModels.get_json_from_entity(agencies)
+        results = []
+        for agency in agencies:
+                results.append(agency.get_dict())
+        return json.dumps(results)
 
 
 @post('/add_agency')
 def add_agency():
         agency_json = request.json['agency']
-        agency = slDao.add_agency(agency_json)
-        return SLModels.get_json_from_entity(agency)
+        agency = slDao.add_agency(agency_json['name'],
+                                  agency_json['description'],
+                                  int(agency_json['grade']),
+                                  agency_json['tags'])
+        return json.dumps(agency.__str__())
 
 
 # run the app

@@ -1,4 +1,3 @@
-# coding=utf-8
 import json
 
 from sqlalchemy import Column, Integer, String
@@ -24,11 +23,11 @@ class Agency(Base):
         grade = Column(Integer)
 
         def __repr__(self):
-                return get_json_from_entity(self)
+                return json.dumps(self.get_dict())
 
+        def get_dict(self):
+                return dict((col, getattr(self, col)) for col in self.__table__.columns.keys())
 
-def get_json_from_entity(entity):
-        return json.dumps(dict((col, getattr(entity, col)) for col in entity.__table__.columns.keys()))
 
 
 def populate_model():
@@ -68,19 +67,19 @@ def populate_model():
 
         description = 'Grey Group is a global advertising and marketing agency with headquarters ' \
                       'in New York City, and 432 offices in 96 countries, operating in 154 cities[1]' \
-                      ' — organized into four geographical units: North America; Europe, Middle East & Africa,' \
+                      ' - organized into four geographical units: North America; Europe, Middle East and Africa,' \
                       ' Asia-Pacific and Latin America.[2]As a unit of communications conglomerate WPP Group,' \
                       ' Grey Global Group operates branded independent business units in many communications disciplines' \
                       ' including: advertising, direct marketing, public relations, public affairs, brand development,' \
                       ' customer relationship management, sales promotion, interactive marketing' \
-                      ' — through its subsidiaries: Grey, G2, GHG, GCI Group, MediaCom Worldwide,' \
-                      ' Alliance, G WHIZ, and WING.Grey Group’s international clients include:' \
-                      ' Procter & Gamble, GlaxoSmithKline, Nokia, British American Tobacco, Diageo,' \
-                      ' Volkswagen, Novartis, Wyeth, Canon, DirecTV, and 3M.[3]The company has won:' \
-                      ' 10 Cannes Lions; beside the Addy, Clio and one Emmy Award.[3]' \
-                      ' Grey Groups European network, Grey EMEA, won 26 Euro EFFIE awards,' \
-                      ' and is the five-time Euro EFFIE Agency Network of the Year, ' \
-                      'in four consecutive years of 2005–2008 [4] and again in 2012 [5]'
+                      ' - through its subsidiaries: Grey, G2, GHG, GCI Group, MediaCom Worldwide,' \
+                      ' Alliance, G WHIZ, and WING.Grey Groups international clients include:' \
+                      'Procter & Gamble, GlaxoSmithKline, Nokia, BritishAmerican Tobacco, Diageo, ' \
+                      'Volkswagen, Novartis, Wyeth, Canon, DirecTV, and 3M.[3] The company has won:' \
+                      '10 Cannes Lions; beside the Addy, Clio and one Emmy Award.[3]' \
+                      'Grey Groups European network, Grey EMEA, won 26 Euro EFFIE awards, ' \
+                      ' and is the five - time Euro EFFIE Agency Network of the Year, ' \
+                      ' in four consecutive years of 2005-2008[4] and again in 2012[5]'
         dao.add_agency('Grey Group', description, GRADE_JEDI, 'Brand activation, Public Relation')
 
         description = 'Mindshare is a global media and marketing services company created in 1997. ' \
@@ -103,6 +102,8 @@ def populate_model():
         agencies = dao.find_all_agencies()
         print 'agencies found after creation (=4)', len(agencies)
         print 'agencies json : ', agencies
+        dao.session.flush()
+        dao.session.close()
 
 
 if __name__ == "__main__":

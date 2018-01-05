@@ -1,6 +1,15 @@
 <div ng-controller="AgencyListCtrller">
         <h3>Agency-list template</h3>
-        <div ng-repeat="agency in agencies">
+        <p>
+                        Search by name:
+                        <input  type="text" class="form-control" placeholder="Filter" ng-model="queryName">
+        </p>
+         <p>
+                        Search by tags:
+                        <input  type="text" class="form-control" placeholder="Filter" ng-model="queryTags">
+        </p>
+
+        <div ng-repeat="agency in agencies | filter: {'name' : queryName, 'tags' : queryTags} | orderBy : 'grade' : true ">
                 <strong>{{agency.name}}</strong> <i>{{agency.tags}}</i> <b>{{gradeMapper[agency.grade]}}</b>
                 <p>{{agency.description}}</p>
         </div>

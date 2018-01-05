@@ -1,3 +1,17 @@
 <div ng-controller="AgencyCreatorCtrller">
         <h3>Agency-creator template</h3>
+        <form>
+                <p>Name: <input type="text" ng-model="addform.name" placeholder="Agency's name"></p>
+                <p>Description: <textarea type="text" ng-model="addform.description" placeholder="Agency's description"></textarea></p>
+                <p>Tags: <input type="text" ng-model="addform.tags" placeholder="Tags"></p>
+                <p><i>Separated by comma</i></p>
+                <p>Grade:
+                        <select type="text" ng-model="addform.grade" placeholder="Agency's name">
+                                <option ng-repeat="gradeKey in gradeKeys" value="gradeKey" ng-value="gradeKey" ng-selected="gradeKey=='0'">{{gradeMapper[gradeKey]}}</option>
+                        </select>
+                </p>
+                <button ng-click="addAgency()">Submit</button>
+
+        </form>
+
 </div>

@@ -78,11 +78,10 @@ def get_agencies():
 
 @post('/add_agency')
 def add_agency():
-        agency_json = request.json['agency']
-        agency = slDao.add_agency(agency_json['name'],
-                                  agency_json['description'],
-                                  int(agency_json['grade']),
-                                  agency_json['tags'])
+        agency = slDao.add_agency(request.json['name'],
+                                  request.json['description'],
+                                  int(request.json['grade']),
+                                  request.json['tags'])
         return json.dumps(agency.__str__())
 
 

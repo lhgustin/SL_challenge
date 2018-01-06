@@ -44,6 +44,13 @@ angular.module('SLApp')
                     }
             }
 
+            /* global vars */
+            self.gradeMapper = {
+                            '0':'PADAWAN',
+                            '1':'JEDI',
+                            '2':'MASTER'
+                    }
+
             /* services */
             self.getAgencies = apiGet('agencies')
             self.addAgency = apiPost('add_agency')

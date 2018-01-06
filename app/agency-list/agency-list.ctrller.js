@@ -3,11 +3,7 @@ angular.module('SLApp')
             function AgencyListCtrller($scope, SLService, $location) {
                     console.log('init AgencyListCtrller');
 
-                    $scope.gradeMapper = {
-                            '0':'PADAWAN',
-                            '1':'JEDI',
-                            '2':'MASTER'
-                    }
+                    $scope.gradeMapper = SLService.gradeMapper
 
                     /* INIT calls of this controller */
                     SLService.getAgencies().then(

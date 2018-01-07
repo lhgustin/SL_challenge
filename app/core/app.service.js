@@ -56,6 +56,7 @@ angular.module('SLApp')
                             '1':'orange',
                             '2':'red'
                     }
+            self.agencies = []
 
             /* services */
             self.getAgencies = apiGet('agencies')

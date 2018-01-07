@@ -8,15 +8,17 @@ angular.module('SLApp')
                     $scope.addform.grade = '0' // default, must be string as above
 
                      $scope.addAgency = function () {
-                            SLService.addAgency({
+                            var agencyJson = {
                                     'name' : $scope.addform.name,
                                     'description' : $scope.addform.description,
-                                    'grade' : $scope.addform.grade,
-                                    'tags': $scope.addform.tags})
+                                    'grade' : parseInt($scope.addform.grade),
+                                    'tags': $scope.addform.tags}
+                            SLService.addAgency(agencyJson)
                                 .then(function success(result) {
-
+                                        SLService.agencies.push(agencyJson)
+                                        $mdDialog.hide()
                             }, function error(result) {
-
+                                        $mdDialog.hide()
                             })
                     }
 

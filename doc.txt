@@ -1,0 +1,51 @@
+DOCUMENTATION USED TO BUILD THIS APP :
+
+### USAGE DOC FOR DEV :
+* bower install
+* (bower install material-design-icons)
+
+Angular integration :
+
+- https://material.angularjs.org/latest/getting-started
+- https://github.com/angular/material-start/tree/step-2
+- https://github.com/angular/material-start/tree/es6-tutorial
+- unread :
+ * https://www.airpair.com/angularjs/posts/material-design-with-angularjs
+ * https://www.w3.org/TR/css-flexbox-1/#overview
+- dependencies :
+ * https://github.com/google/material-design-icons
+ * http://google.github.io/material-design-icons/
+ * alt : https://klarsys.github.io/angular-material-icons/
+ * https://material.io/icons/#ic_add
+
+
+Angular input / forms :
+- https://docs.angularjs.org/api/ng/directive/ngValue
+- https://docs.angularjs.org/api/ng/directive/select
+- https://stackoverflow.com/questions/20738953/angular-js-remove-blank-option-from-select-option
+- https://material.angularjs.org/1.0.4/api/directive/mdAutofocus
+
+Angular Material layout & layout directive
+- https://material.angularjs.org/latest/api/directive/mdToolbar
+- https://material.angularjs.org/1.0.4/api/directive/mdAutofocus
+- https://material.angularjs.org/latest/demo/divider
+- https://material.angularjs.org/1.1.1/demo/panel
+- https://material.angularjs.org/latest/demo/button
+
+Angular Material modal
+- https://stackoverflow.com/questions/40646827/adding-html-content-to-angular-material-mddialog
+- https://material.angularjs.org/latest/demo/dialog
+- https://material.angularjs.org/latest/api/service/$mdDialog
+
+md-fa issues :
+- https://github.com/angular/material/issues/2205
+- http://source.technology/angular-material-floating-action-button
+- https://material.angularjs.org/latest/api/directive/mdIcon
+
+md-sidenav issue:
+- https://github.com/angular/material/issues/9524
+
+md-chip (as Bootstrap 'labels') issue:
+- What I wanted : https://getbootstrap.com/docs/3.3/components/
+- https://stackoverflow.com/questions/36418430/angular-material-chips-effect-without-angular-material
+- https://github.com/angular/material/issues/2383

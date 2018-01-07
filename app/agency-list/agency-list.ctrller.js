@@ -10,7 +10,8 @@ angular.module('SLApp')
                     /* INIT calls of this controller */
                     SLService.getAgencies().then(
                         function (result) {
-                                $scope.agencies = result;
+                                SLService.agencies = result
+                                $scope.agencies = SLService.agencies;
                                 console.log("Agencies loaded "+$scope.agencies.length)
                         },
                         function(error) {

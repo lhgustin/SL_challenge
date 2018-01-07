@@ -7,7 +7,7 @@ Misc doc :
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 
-TODO :
+Plan :
 * Create PostgresSQL local instance and py config file
 * Py Bottle
     * Architecture
@@ -23,7 +23,8 @@ TODO :
 * Dev phase
 * Documentation to run
 
-* TODO : refresh angular list when adding a new agency (no refresh)
+SUB-TASKS :
+* TODO : ~~refresh angular list when adding a new agency (no refresh)~~
 * TODO : bower material dependencies
 * TODO : custom style into proper CSS
 * TODO : error/succes messages
@@ -43,7 +44,3 @@ TODO :
     * `python SLModels.py` to create schema
 5. Run the server `python SLServer.py`
 6. Enjoy from http://localhost:8080
-
-### USAGE DOC FOR DEV :
-* bower install
-* (bower install material-design-icons)

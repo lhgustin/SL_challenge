@@ -1,7 +1,17 @@
 <div>
-        <h1>Appli page</h1>
-
-        <div ng-include=" './agency-list/agency-list.template.html' "></div>
-        <div ng-include=" './agency-creator/agency-creator.template.html' "></div>
-
+        <md-toolbar layout="row">
+                <div class="md-toolbar-tools">
+                        <h1>
+                                Yoda Agencies
+                        </h1>
+                </div>
+        </md-toolbar>
+        <div layout-padding>
+                <div ng-include=" './agency-list/agency-list.template.html' "></div>
+                <!--BUG for fixing the button bottom position : https://github.com/angular/material/issues/2205 -->
+                <md-button class="md-fab md-fab-bottom-right" style="position: fixed !important;" aria-label="Add agency" ng-click="showPrompt()" >
+                        <md-icon md-svg-src="./static/images/ic_add_white_36px.svg"></md-icon>
+                </md-button>
+                <!--<div ng-include=" './agency-creator/agency-creator.template.html' "></div>-->
+        </div>
 </div>

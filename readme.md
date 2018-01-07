@@ -23,6 +23,13 @@ TODO :
 * Dev phase
 * Documentation to run
 
+* TODO : refresh angular list when adding a new agency (no refresh)
+* TODO : bower material dependencies
+* TODO : custom style into proper CSS
+* TODO : error/succes messages
+* TODO : responsive behaviour
+* TODO : testing
+* (TODO) : refactor agency-list and creator into isolated angular components
 
 
 
@@ -37,5 +44,6 @@ TODO :
 5. Run the server `python SLServer.py`
 6. Enjoy from http://localhost:8080
 
-### USAGE DOC :
+### USAGE DOC FOR DEV :
 * bower install
+* (bower install material-design-icons)

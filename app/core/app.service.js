@@ -51,6 +51,12 @@ angular.module('SLApp')
                             '2':'MASTER'
                     }
 
+            self.gradeColorMapper = {
+                            '0':'green',
+                            '1':'orange',
+                            '2':'red'
+                    }
+
             /* services */
             self.getAgencies = apiGet('agencies')
             self.addAgency = apiPost('add_agency')

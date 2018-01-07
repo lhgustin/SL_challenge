@@ -1,16 +1,35 @@
-<div ng-controller="AgencyListCtrller">
-        <h3>Agency-list template</h3>
-        <p>
-                        Search by name:
-                        <input  type="text" class="form-control" placeholder="Filter" ng-model="queryName">
-        </p>
-         <p>
-                        Search by tags:
-                        <input  type="text" class="form-control" placeholder="Filter" ng-model="queryTags">
-        </p>
-
-        <div ng-repeat="agency in agencies | filter: {'name' : queryName, 'tags' : queryTags} | orderBy : 'grade' : true ">
-                <strong>{{agency.name}}</strong> <i>{{agency.tags}}</i> <b>{{gradeMapper[agency.grade]}}</b>
-                <p>{{agency.description}}</p>
-        </div>
+<div ng-controller="AgencyListCtrller" layout="row">
+        <!--flex tag here required, otherwise sidenav stretched-->
+        <md-content layout-padding flex layout="column">
+                <h2>The yoda agency list :</h2>
+                <md-list>
+                        <md-item ng-repeat="agency in agencies | filter: {'name' : queryName, 'tags' : queryTags} | orderBy : 'grade' : true ">
+                                <strong>{{agency.name}}</strong> <i>{{agency.tags}}</i>
+                                <md-button style="min-height : 20px; line-height:normal; margin: 2px 2px;font-size: 12px; background-color: {{gradeColorMapper[agency.grade]}}" class="md-raised md-primary">{{gradeMapper[agency.grade]}}</md-button>
+                                <p>{{agency.description}}</p>
+                                <md-divider ng-if="!$last"></md-divider>
+                                <br>
+                        </md-item>
+                </md-list>
+        </md-content>
+        <!-- style overriden to get smaller width (chrome inspector) -->
+        <!-- layout-fill to not use all the available height -->
+        <!-- layout-padding for auto padding -->
+        <md-sidenav layout-fill md-is-locked-open="true" style="width: auto" class="md-sidenav-right md-whiteframe-z2">
+                <md-toolbar>
+                        <div class="md-toolbar-tools">
+                                <h1>Search</h1>
+                        </div>
+                </md-toolbar>
+                <md-content layout-padding layout="column">
+                        <md-input-container>
+                                <label>Search by name:</label>
+                                <input  type="text"  placeholder="Filter" ng-model="queryName">
+                        </md-input-container>
+                        <md-input-container>
+                                <label>Search by tags:</label>
+                                <input  type="text"  placeholder="Filter" ng-model="queryTags">
+                        </md-input-container>
+                </md-content>
+        </md-sidenav>
 </div>

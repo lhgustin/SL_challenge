@@ -4,6 +4,8 @@ angular.module('SLApp')
                     console.log('init AgencyListCtrller');
 
                     $scope.gradeMapper = SLService.gradeMapper
+                    $scope.gradeColorMapper = SLService.gradeColorMapper
+
 
                     /* INIT calls of this controller */
                     SLService.getAgencies().then(

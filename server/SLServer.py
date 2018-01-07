@@ -18,19 +18,19 @@ def home():
         return static_file('index.html', root='../app')
 
 
-@route('/js/:path#.+#')
+@route('/static/js/:path#.+#')
 def server_static(path):
         print 'static!', path
         return static_file(path, root='../app/static/js')
 
 
-@route('/css/:path#.+#')
+@route('/static/css/:path#.+#')
 def server_static(path):
         print 'static!', path
         return static_file(path, root='../app/static/css')
 
 
-@route('/images/:path#.+#')
+@route('/static/images/:path#.+#')
 def server_static(path):
         print 'static!', path
         return static_file(path, root='../app/static/images')

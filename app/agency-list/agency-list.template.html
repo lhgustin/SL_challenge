@@ -1,7 +1,10 @@
 <div ng-controller="AgencyListCtrller" layout="row">
         <!--flex tag here required, otherwise sidenav stretched-->
-        <md-content layout-padding flex layout="column">
+        <md-content layout-padding flex layout="column" >
                 <h2>The yoda agency list ({{agencies.length}}):</h2>
+                <h4 ng-if="serverErrors" style="color: red">
+                      {{serverErrorsMsg}}, please retry later
+                </h4>
                 <md-list>
                         <md-item ng-repeat="agency in agencies | filter: {'name' : queryName, 'tags' : queryTags} | orderBy : 'grade' : true ">
                                 <strong>{{agency.name}}</strong> <i>{{agency.tags}}</i>

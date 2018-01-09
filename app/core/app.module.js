@@ -3,5 +3,4 @@
 angular.module('SLApp', [
         'ngRoute',
         'ngMaterial',
-        'ngMdIcons'
 ])

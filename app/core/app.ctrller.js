@@ -1,6 +1,6 @@
 angular.module('SLApp')
-    .controller('SLController', ['$scope', 'SLService','$location','$mdDialog',
-            function CoreController($scope, SLService, $location, $mdDialog) {
+    .controller('SLController', ['$scope', 'SLService','$location','$mdDialog', '$anchorScroll',
+            function CoreController($scope, SLService, $location, $mdDialog, $anchorScroll) {
                     console.log('init SLController');
 
                     $scope.showPrompt = function() {
@@ -10,4 +10,8 @@ angular.module('SLApp')
                             }
                             $mdDialog.show(confirmOptions)
                           };
+
+                     $scope.scrollTop = function () {
+                        $anchorScroll();
+                      };
             }]);

@@ -7,6 +7,7 @@ DOCUMENTATION USED TO BUILD THIS APP :
 Angular integration :
 
 - https://material.angularjs.org/latest/getting-started
+- https://github.com/angular/bower-material/blob/master/README.md
 - https://github.com/angular/material-start/tree/step-2
 - https://github.com/angular/material-start/tree/es6-tutorial
 - unread :
@@ -17,7 +18,20 @@ Angular integration :
  * http://google.github.io/material-design-icons/
  * alt : https://klarsys.github.io/angular-material-icons/
  * https://material.io/icons/#ic_add
+ - mdToast issue
+    * https://github.com/angular/material/issues/3539
+    * https://codepen.io/anon/pen/zGRZav
+    * https://codepen.io/dani3l/pen/PqQpgB
+    * https://material.angularjs.org/latest/api/directive/mdContent
+    * http://plnkr.co/edit/LnbDff2bK7zw8FsSorll?p=preview
 
+Bower
+- https://bower.io/docs/api/#info
+- https://github.com/angular/bower-material/blob/master/README.md
+- versions issues :
+ * https://github.com/angular/angular.js/issues/15786
+ * https://github.com/angular/material/issues/10475
+ * https://github.com/angular/material/issues/10505
 
 Angular input / forms :
 - https://docs.angularjs.org/api/ng/directive/ngValue
@@ -49,3 +63,12 @@ md-chip (as Bootstrap 'labels') issue:
 - What I wanted : https://getbootstrap.com/docs/3.3/components/
 - https://stackoverflow.com/questions/36418430/angular-material-chips-effect-without-angular-material
 - https://github.com/angular/material/issues/2383
+
+angular error validation
+- https://www.yearofmoo.com/2014/05/how-to-use-ngmessages-in-angularjs.html
+- https://jaysoo.ca/2014/10/14/async-form-errors-and-messages-in-angularjs/
+- https://material.angularjs.org/latest/demo/input
+- https://stackoverflow.com/questions/28157377/how-to-display-server-errors-in-angularjs-with-ng-messages
+- https://stackoverflow.com/questions/35401663/display-custom-error-ngmessage
+- https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages
+- https://steelkiwi.com/blog/validation-error-handling-angularjs-applicatios/

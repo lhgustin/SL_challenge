@@ -9,7 +9,7 @@
         <div layout-padding>
                 <div ng-include=" './agency-list/agency-list.template.html' "></div>
                 <!--BUG for fixing the button bottom position : https://github.com/angular/material/issues/2205 -->
-                <md-button class="md-fab md-fab-bottom-right" style="position: fixed !important;" aria-label="Add agency" ng-click="showPrompt()" >
+                <md-button class="md-fab md-fab-bottom-right" style="position: fixed !important;" aria-label="Add agency" ng-click="scrollTop();showPrompt()" >
                         <md-icon md-svg-src="./static/images/ic_add_white_36px.svg"></md-icon>
                 </md-button>
                 <!--<div ng-include=" './agency-creator/agency-creator.template.html' "></div>-->

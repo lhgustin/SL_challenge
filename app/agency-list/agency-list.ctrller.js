@@ -16,6 +16,8 @@ angular.module('SLApp')
                         },
                         function(error) {
                                 console.log(error.statusText);
+                                $scope.serverErrors = true
+                                $scope.serverErrorsMsg = error.statusText
                         }
                     )
             }]);

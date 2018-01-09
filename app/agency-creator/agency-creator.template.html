@@ -2,20 +2,36 @@
         <md-toolbar class="md-toolbar-tools">
                 <h3>Agency-creator</h3>
         </md-toolbar>
-        <md-dialog-content layout-padding>
-                <div layout="column">
-                        <md-input-container><label>Name: </label><input md-autofocus type="text" ng-model="addform.name" placeholder="Agency's name"></md-input-container>
-                        <md-input-container><label>Description: </label><textarea type="text" rows="5" ng-model="addform.description" placeholder="Agency's description"></textarea></md-input-container>
+                <md-dialog-content layout-padding>
+                <form layout="column" name="creatorForm">
+                        <h4 ng-if="serverErrors" style="color: red">
+                              {{serverErrorsMsg}}<br>Check the fields or retry later
+                        </h4>
+                        <md-input-container>
+                                <label>Name: </label>
+                                <input md-autofocus type="text" required ng-model="addModel.name" placeholder="Agency's name">
+                                <ng-messages for="creatorForm.name.$error">
+                                        <ng-message when="required" class="error">This is required</ng-message>
+                                </ng-messages>
+                        </md-input-container>
+                        <md-input-container>
+                                <label>Description: </label>
+                                <textarea type="text" rows="5" required ng-model="addModel.description" placeholder="Agency's description">
+                                </textarea>
+                                <ng-messages for="creatorForm.description.$error">
+                                        <ng-message when="required" class="error">This is required</ng-message>
+                                </ng-messages>
+                        </md-input-container>
                         <md-input-container>
                                 <label>Tags:</label>
-                                <input type="text" ng-model="addform.tags" placeholder="Tags">
+                                <input type="text" ng-model="addModel.tags" placeholder="Tags">
                                 <div style="color: grey"></div>
                         </md-input-container>
 
 
                         <md-input-container>
                                 <label>Grade: </label>
-                                <md-select type="text" ng-model="addform.grade" placeholder="Agency's name">
+                                <md-select type="text" ng-model="addModel.grade" placeholder="Agency's grade">
                                         <md-option ng-repeat="gradeKey in gradeKeys" value="gradeKey" ng-value="gradeKey">
                                                 {{gradeMapper[gradeKey]}}
                                         </md-option>
@@ -26,6 +42,6 @@
                                 <md-button ng-click="closeDialog()" class="md-primary">Close</md-button>
                                 <md-button ng-click="addAgency()">Submit</md-button>
                         </md-dialog-actions>
-                </div>
+                </form>
         </md-dialog-content>
 </md-dialog>

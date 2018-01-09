@@ -27,7 +27,7 @@ SUB-TASKS :
 * TODO : ~~refresh angular list when adding a new agency (no refresh)~~
 * TODO : ~~bower material dependencies~~
 * TODO : ~~error/success messages~~
-* TODO : responsive behaviour
+* TODO : ~~responsive behaviour~~
 * TODO : testing
 * (TODO) : custom style into proper CSS
 * (TODO) : refactor agency-list and creator into isolated angular components

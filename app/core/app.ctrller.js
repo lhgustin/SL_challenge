@@ -1,6 +1,6 @@
 angular.module('SLApp')
-    .controller('SLController', ['$scope', 'SLService','$location','$mdDialog', '$anchorScroll',
-            function CoreController($scope, SLService, $location, $mdDialog, $anchorScroll) {
+    .controller('SLController', ['$scope', 'SLService','$location','$mdDialog', '$anchorScroll','$mdSidenav',
+            function CoreController($scope, SLService, $location, $mdDialog, $anchorScroll, $mdSidenav) {
                     console.log('init SLController');
 
                     $scope.showPrompt = function() {
@@ -14,4 +14,11 @@ angular.module('SLApp')
                      $scope.scrollTop = function () {
                         $anchorScroll();
                       };
+
+                     /**
+                   * Hide or Show the 'left' sideNav area
+                   */
+                  $scope.toggleList = function () {
+                    $mdSidenav('right').toggle();
+                  }
             }]);

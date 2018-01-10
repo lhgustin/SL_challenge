@@ -28,7 +28,8 @@ SUB-TASKS :
 * TODO : ~~bower material dependencies~~
 * TODO : ~~error/success messages~~
 * TODO : ~~responsive behaviour~~
-* TODO : testing
+* TODO : ~~testing back~~
+* TODO : testing front
 * (TODO) : custom style into proper CSS
 * (TODO) : refactor agency-list and creator into isolated angular components
 

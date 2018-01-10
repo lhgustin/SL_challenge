@@ -76,3 +76,12 @@ angular error validation
 Responsive
 - https://github.com/angular/material-start/tree/es6-tutorial (step 6)
 - https://github.com/angular/material-start/blob/es6-tutorial/app/src/AppController.js
+
+Testing py
+- https://docs.python.org/2/library/unittest.html
+- https://www.pythonsheets.com/notes/python-sqlalchemy.html
+- http://docs.sqlalchemy.org/en/latest/orm/session_api.html
+- http://kronosapiens.github.io/blog/2014/07/29/setting-up-unit-tests-with-flask.html
+- https://leemendelowitz.github.io/blog/how-does-python-find-packages.html
+- https://docs.python.org/3/library/sys.html#sys.path
+

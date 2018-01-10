@@ -29,8 +29,7 @@ class Agency(Base):
                 return dict((col, getattr(self, col)) for col in self.__table__.columns.keys())
 
 
-
-def populate_model():
+def re_populate_model():
         engine = create_engine(URL(**db_url))
 
         # create tables
@@ -38,7 +37,7 @@ def populate_model():
         Base.metadata.create_all(bind=engine)
 
         for _t in Base.metadata.tables:
-                print "Table: ", _t
+                print "re_populate_model, Table: ", _t
 
         # populate tables
         dao = SLDao()
@@ -99,12 +98,13 @@ def populate_model():
                       'team Unilever for Asia Pacific, Africa, Middle East, Turkey and Russia (AAR). [5]'
         dao.add_agency('Mindshare', description, GRADE_PADAWAN, 'Media Planning, Advertising')
 
-        agencies = dao.find_all_agencies()
-        print 'agencies found after creation (=4)', len(agencies)
-        print 'agencies json : ', agencies
-        dao.session.flush()
-        dao.session.close()
+        # agencies = dao.find_all_agencies()
+        # print 'agencies found after creation (=4)', len(agencies)
+        # print 'agencies json : ', agencies
+        # dao.session.close()
+        # return dao
+        dao.close()
 
 
 if __name__ == "__main__":
-        populate_model()
+        re_populate_model()

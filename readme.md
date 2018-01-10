@@ -47,7 +47,7 @@ SUB-TASKS :
 3. `npm install`, will also handle `bower` automatically
 4. Postgres SQL :
     * Create an instance of postgres DB https://www.postgresql.org/
-    * Edit `python SLConfig.py` to map your instance
+    * Edit `SLConfig.py` to map your instance
     * `python SLModels.py` to create schema
 5. Run the server `python SLServer.py`
 6. Enjoy from http://localhost:8080

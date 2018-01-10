@@ -36,7 +36,7 @@ SUB-TASKS :
 ### LESSONS LEARNED :
 - Quick launch : https://github.com/angular/angular-seed
 - setup of testing first (TDD)
-- Bootstrap >> Angular Material (js), for bugs, stability and overall layout and UI building
+- Bootstrap >>> Angular Material (js), for bugs, stability and overall ease of building layout + UI
 - Node.js VS py bottle for quick back-end ?
 
 ### INSTALLATION

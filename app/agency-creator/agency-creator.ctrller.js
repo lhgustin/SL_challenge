@@ -1,6 +1,6 @@
 angular.module('SLApp')
-    .controller('AgencyCreatorCtrller', ['$scope', 'SLService','$location','$mdDialog', '$mdToast',
-            function AgencyCreatorCtrller($scope, SLService, $location, $mdDialog, $mdToast) {
+    .controller('AgencyCreatorCtrller', ['$scope', 'SLService','$mdDialog', '$mdToast',
+            function AgencyCreatorCtrller($scope, SLService, $mdDialog, $mdToast) {
                     console.log('init AgencyCreatorCtrller');
                     $scope.gradeMapper = SLService.gradeMapper
                     $scope.gradeKeys = Object.keys($scope.gradeMapper)
@@ -16,6 +16,7 @@ angular.module('SLApp')
                                     'tags': $scope.addModel.tags}
                             SLService.addAgency(agencyJson)
                                 .then(function success(result) {
+                                        console.log('success for the creation of '+JSON.stringify(agencyJson))
                                         SLService.agencies.push(agencyJson)
                                         $mdDialog.hide()
                                         $mdToast.show(

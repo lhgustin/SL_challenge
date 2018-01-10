@@ -29,19 +29,29 @@ SUB-TASKS :
 * TODO : ~~error/success messages~~
 * TODO : ~~responsive behaviour~~
 * TODO : ~~testing back~~
-* TODO : testing front
-* (TODO) : custom style into proper CSS
+* TODO : ~~testing front~~
+* (TODO) : custom styles into proper CSS
 * (TODO) : refactor agency-list and creator into isolated angular components
 
-
+### LESSONS LEARNED :
+- Quick launch : https://github.com/angular/angular-seed
+- setup of testing first (TDD)
+- Bootstrap >> Angular Material (js), for bugs, stability and overall layout and UI building
+- Node.js VS py bottle for quick back-end ?
 
 ### INSTALLATION
 1. Install python 2.7.X https://www.python.org/
-2. Install bower https://bower.io/
-3. `bower install` from root dir to load js libs
+2. ~~Install bower https://bower.io/~~
+2. Install npm https://www.npmjs.com/
+3. ~~`bower install` from root dir to load js libs~~
+3. `npm install`, will also handle `bower` automatically
 4. Postgres SQL :
     * Create an instance of postgres DB https://www.postgresql.org/
     * Edit `python SLConfig.py` to map your instance
     * `python SLModels.py` to create schema
 5. Run the server `python SLServer.py`
 6. Enjoy from http://localhost:8080
+
+### TESTS
+1. front : `npm test`
+2. back : `python /test/TestSLDao.py`

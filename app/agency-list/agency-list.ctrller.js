@@ -1,6 +1,6 @@
 angular.module('SLApp')
-    .controller('AgencyListCtrller', ['$scope', 'SLService','$location',
-            function AgencyListCtrller($scope, SLService, $location) {
+    .controller('AgencyListCtrller', ['$scope', 'SLService',
+            function AgencyListCtrller($scope, SLService) {
                     console.log('init AgencyListCtrller');
 
                     $scope.gradeMapper = SLService.gradeMapper

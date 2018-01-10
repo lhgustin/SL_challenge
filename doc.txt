@@ -85,3 +85,15 @@ Testing py
 - https://leemendelowitz.github.io/blog/how-does-python-find-packages.html
 - https://docs.python.org/3/library/sys.html#sys.path
 
+Test angular
+- https://docs.angularjs.org/guide/unit-testing
+- https://stackoverflow.com/questions/37035321/jasmine-spyon-with-specific-arguments
+- https://jasmine.github.io/2.0/introduction.html
+- http://www.bradoncode.com/blog/2015/07/13/unit-test-promises-angualrjs-q/
+- https://stackoverflow.com/questions/26581805/karma-complains-module-is-not-available ISSUE
+- unused : https://github.com/karma-runner/karma-jasmine
+- config : https://github.com/angular/angular-seed
+- https://github.com/angular/angular-phonecat/blob/step-2/app/app.spec.js
+- https://docs.angularjs.org/tutorial/step_02
+- https://github.com/jasmine/jasmine
+- https://jasmine.github.io/

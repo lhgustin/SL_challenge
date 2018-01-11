@@ -4,7 +4,7 @@
         </md-toolbar>
                 <md-dialog-content layout-padding>
                 <form layout="column" name="creatorForm">
-                        <h4 ng-if="serverErrors" style="color: red">
+                        <h4 ng-if="serverErrors" class="server-errors">
                               {{serverErrorsMsg}}<br>Check the fields or retry later
                         </h4>
                         <md-input-container>
@@ -25,7 +25,7 @@
                         <md-input-container>
                                 <label>Tags:</label>
                                 <input type="text" ng-model="addModel.tags" placeholder="Tags">
-                                <div style="color: grey"></div>
+                                <span class="input-hint">Separate by a comma</span>
                         </md-input-container>
 
 

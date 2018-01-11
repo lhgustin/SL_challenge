@@ -2,20 +2,20 @@
         <!--flex tag here required, otherwise sidenav stretched-->
         <md-content layout-padding flex layout="column" >
                 <h2>The yoda agency list ({{agencies.length}}):</h2>
-                <h4 ng-if="serverErrors" style="color: red">
+                <h4 ng-if="serverErrors" class="server-errors">
                       {{serverErrorsMsg}}, please retry later
                 </h4>
                 <md-list>
                         <md-item ng-repeat="agency in agencies | filter: {'name' : queryName, 'tags' : queryTags} | orderBy : 'grade' : true ">
                                 <strong>{{agency.name}}</strong> <i>{{agency.tags}}</i>
-                                <md-button style="min-height : 20px; line-height:normal; margin: 2px 2px;font-size: 12px; background-color: {{gradeColorMapper[agency.grade]}}" class="md-raised md-primary">{{gradeMapper[agency.grade]}}</md-button>
+                                <md-button style="background-color: {{gradeColorMapper[agency.grade]}}" class="md-raised md-primary button-as-tag">{{gradeMapper[agency.grade]}}</md-button>
                                 <p>{{agency.description}}</p>
                                 <md-divider ng-if="!$last"></md-divider>
                                 <br>
                         </md-item>
                 </md-list>
         </md-content>
-        <!-- style overriden to get smaller width (chrome inspector) -->
+        <!-- style overriden to get smaller width:auto (chrome inspector) ? -->
         <!-- layout-fill to not use all the available height -->
         <!-- layout-padding for auto padding -->
         <md-sidenav layout-fill md-is-locked-open="$mdMedia('gt-xs')" md-component-id="right"  class="md-sidenav-right md-whiteframe-z2">

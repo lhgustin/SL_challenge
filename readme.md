@@ -30,7 +30,7 @@ SUB-TASKS :
 * TODO : ~~responsive behaviour~~
 * TODO : ~~testing back~~
 * TODO : ~~testing front~~
-* (TODO) : custom styles into proper CSS
+* TODO : ~~custom styles into proper CSS~~
 * (TODO) : refactor agency-list and creator into isolated angular components
 
 ### LESSONS LEARNED :
@@ -38,6 +38,7 @@ SUB-TASKS :
 - setup of testing first (TDD)
 - Bootstrap >>> Angular Material (js), for bugs, stability and overall ease of building layout + UI
 - Node.js VS py bottle for quick back-end ?
+- CSS incremental
 
 ### INSTALLATION
 1. Install python 2.7.X https://www.python.org/

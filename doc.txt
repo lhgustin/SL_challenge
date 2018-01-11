@@ -56,6 +56,7 @@ md-fa issues :
 - http://source.technology/angular-material-floating-action-button
 - https://material.angularjs.org/latest/api/directive/mdIcon
 
+
 md-sidenav issue:
 - https://github.com/angular/material/issues/9524
 

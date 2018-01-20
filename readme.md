@@ -46,7 +46,7 @@ SUB-TASKS :
 ### INSTALLATION (FIXED)
 1. Install python 2.7.X https://www.python.org/
 1. Install the Python packet manager PIP https://pip.pypa.io/en/stable/installing/
-    1. Install the `sudo pip install bottle`
+    1. Install the Back-end microframework Bottle : `sudo pip install bottle`
     1. Install the Sqlalchemy ORM libs: `sudo pip install SQLAlchemy`
     1. Install ORM dependency : `sudo pip install psycopg2`
 2. Install npm https://www.npmjs.com/

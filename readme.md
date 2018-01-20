@@ -3,6 +3,9 @@ SL challenge
 
 * Challenge source : https://github.com/sortlist/jobs
 
+![alt text](screenshot.png  "Screenshot")
+
+
 Misc doc :
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
@@ -42,10 +45,15 @@ SUB-TASKS :
 
 ### INSTALLATION (BROKEN)
 1. Install python 2.7.X https://www.python.org/
-2. ~~Install bower https://bower.io/~~
+1. Install the Python packet manager PIP https://pip.pypa.io/en/stable/installing/
+    1. Install the `sudo pip install bottle`
+    1. Install the Sqlalchemy ORM libs: `sudo pip install SQLAlchemy`
+    1. Install ORM dependency : `sudo pip install psycopg2`
 2. Install npm https://www.npmjs.com/
-3. ~~`bower install` from root dir to load js libs~~
 3. `npm install`, will also handle `bower` automatically
+3. If npm is returning a `postinstall` error for bower, manually :
+    2. ~~Install bower https://bower.io/~~
+    2. `bower install` from root dir to load js libs // BROKEN NPM
 4. Postgres SQL :
     * Create an instance of postgres DB https://www.postgresql.org/
     * Edit `SLConfig.py` to map your instance

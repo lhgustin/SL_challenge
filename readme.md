@@ -40,7 +40,7 @@ SUB-TASKS :
 - Node.js VS py bottle for quick back-end ?
 - CSS incremental
 
-### INSTALLATION
+### INSTALLATION (BROKEN)
 1. Install python 2.7.X https://www.python.org/
 2. ~~Install bower https://bower.io/~~
 2. Install npm https://www.npmjs.com/

@@ -52,8 +52,8 @@ SUB-TASKS :
 2. Install npm https://www.npmjs.com/
 3. `npm install`, will also handle `bower` automatically
 3. If npm is returning a `postinstall` error for bower, manually :
-    3. ~~Install bower https://bower.io/~~
-    3. `bower install` from root dir to load js libs // BROKEN NPM
+    1. ~~Install bower https://bower.io/~~
+    1. `bower install` from root dir to load js libs // BROKEN NPM
 4. Postgres SQL :
     * Create an instance of postgres DB https://www.postgresql.org/
     * Edit `SLConfig.py` to map your instance

@@ -43,7 +43,7 @@ SUB-TASKS :
 - Node.js VS py bottle for quick back-end ?
 - CSS incremental
 
-### INSTALLATION (BROKEN)
+### INSTALLATION (FIXED)
 1. Install python 2.7.X https://www.python.org/
 1. Install the Python packet manager PIP https://pip.pypa.io/en/stable/installing/
     1. Install the `sudo pip install bottle`
